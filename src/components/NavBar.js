@@ -33,7 +33,7 @@ const NavBar = () => {
                         <>
                             <Tabs
                                 sx={{ marginLeft: "auto" }}
-                                indicatorColor="secondary"
+                                indicatorColor="primary"
                                 textColor="inherit"
                                 value={value}
                                 onChange={(e, value) => setValue(value)}
@@ -43,12 +43,12 @@ const NavBar = () => {
                                 <Tab label="Quienes somos" />
                                 <Tab label="Contacto" />
                             </Tabs>
-                            {/* <Button sx={{ marginLeft: "auto" }} variant="contained">
+                            <Button sx={{ marginLeft: "auto" }} variant="contained">
                                 Login
                             </Button>
-                            <Button sx={{ marginLeft: "10px" }} variant="contained">
+                            <Button sx={{ marginLeft: "10px" }} variant="contained" >
                                 SignUp
-                            </Button> */}
+                            </Button>
                         </>
                     )}
                 </Toolbar>
