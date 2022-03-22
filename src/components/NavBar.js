@@ -10,20 +10,18 @@ import {
     useTheme,
 } from "@mui/material";
 import DrawerComp from "./Drawer";
-import Logo from '../assets/images/Logo.png'
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
     const [value, setValue] = useState();
     const theme = useTheme();
-    console.log(theme);
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-    console.log(isMatch);
 
     return (
         <React.Fragment>
             <AppBar sx={{ background: "#000000" }}>
                 <Toolbar>
-                    <img src= {Logo} alt="Logo" width={65}/>
+                    <CartWidget />
                     {isMatch ? (
                         <>
                             <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
