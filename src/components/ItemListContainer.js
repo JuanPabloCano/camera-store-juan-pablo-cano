@@ -4,7 +4,7 @@ const ItemListContainer = (props) => {
     return (
         <div className="ItemListContainer">
             <h1>
-                {props.greeting} 
+                {props.products} 
             </h1>
         </div>
     )
