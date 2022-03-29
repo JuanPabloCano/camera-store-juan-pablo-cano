@@ -1,19 +1,19 @@
 import './App.css';
 import ItemListContainer from './components/ItemListContainer';
 import ResponsiveAppBar from './components/NavBar';
-// import ItemList from './components/ItemList';
-import ItemCount from './components/ItemCount';
+import ItemList from './components/ItemList';
+import { Container } from 'react-bootstrap';
 
 function App() {
-
-  const stock = 10;
 
   return (
     <>
       <div className="App">
         <ResponsiveAppBar />
-        <ItemListContainer products= "Cámaras " />
-        <ItemCount stock = {stock}/>
+        <Container>
+          <ItemListContainer products="Cámaras " />
+          <ItemList />
+        </Container>
       </div>
     </>
   );
