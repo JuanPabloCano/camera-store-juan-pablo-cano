@@ -1,20 +1,21 @@
 import {
     Button,
     Card,
+    Container,
     CardMedia,
     CardContent,
     Typography,
     CardActions
 } from '@mui/material';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import React from 'react'
 
 const Item = ({ item }) => {
     const { title, price, image } = item;
 
     return (
-        <Container>
+        <Container className="general-container">
             <Row>
                 <Col>
                     <Card sx={{ maxWidth: 345 }}>
@@ -23,8 +24,8 @@ const Item = ({ item }) => {
                             height="400"
                         />
                         <CardContent>
+                            <img src={`${image}`} alt={title} />
                             <Typography gutterBottom variant="h5" component="div">
-                                <img src={`./${image}`} alt={title} />
                                 <h2>{title}</h2>
                                 <p> Precio: {price}</p>
                             </Typography>

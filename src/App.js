@@ -1,19 +1,22 @@
 import './App.css';
-import ItemListContainer from './components/ItemListContainer';
 import ResponsiveAppBar from './components/NavBar';
-import ItemList from './components/ItemList';
-import { Container } from 'react-bootstrap';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Products from './pages/Products';
+import Home from './pages/Home';
 
 function App() {
 
   return (
     <>
       <div className="App">
-        <ResponsiveAppBar />
-        <Container>
-          <ItemListContainer products="Cámaras " />
-          <ItemList />
-        </Container>
+        <BrowserRouter>
+          <ResponsiveAppBar />
+          <Routes>
+            <Route path="/products" element={<Products />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </BrowserRouter>
+
       </div>
     </>
   );

@@ -11,7 +11,7 @@ const ItemList = ({ items }) => {
             id: uuidv4(),
             title: 'Canon 2000D',
             price: 2000,
-            image: 'Canon-2000D-con-lente-PgBlanca.jpg'
+            image: './assets/images/Canon-2000D-con-lente-PgBlanca.jpg'
         },
         {
             id: uuidv4(),
@@ -60,16 +60,12 @@ const ItemList = ({ items }) => {
     }
 
     return (
-        <Container fluid = 'md'>
-            <Row>
-                <Col>
-                    {camaras.map((camara, id) => {
-                        return (
-                            <Item item={camara} key={id} />
-                        )
-                    })}
-                </Col>
-            </Row>
+        <Container fluid='md'>
+            {camaras.map((camara, id) => {
+                return (
+                    <Item item={camara} key={id} />
+                )
+            })}
         </Container>
     )
 }

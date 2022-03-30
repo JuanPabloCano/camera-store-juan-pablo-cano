@@ -38,6 +38,7 @@ const NavBar = () => {
                                 value={value}
                                 onChange={(e, value) => setValue(value)}
                             >
+                                <Tab label="Inicio" />
                                 <Tab label="Productos" />
                                 <Tab label="Categorías" />
                                 <Tab label="Quienes somos" />
